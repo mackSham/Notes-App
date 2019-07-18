@@ -1,5 +1,1 @@
-const paint = require('chalk');
-const getNotes = require('./notes.js');
-
-console.log(getNotes());
-console.log(paint.green.bold.inverse('SUCCESS'));
+console.log(process.argv[2]);
