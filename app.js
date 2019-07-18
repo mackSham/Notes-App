@@ -1,6 +1,6 @@
 const paint = require('chalk');
 const yargs = require('yargs');
-
+const notes = require('./notes.js');
 
 //Adding Command for Command line argument
 yargs.command({
@@ -20,7 +20,7 @@ yargs.command({
     }
   },
   handler: function(argv) {
-    console.log('Adding a new Note',argv);
+    notes.addNotes(argv.title,argv.body);
   }
 })
 
@@ -35,8 +35,8 @@ yargs.command({
       type:'string'
     }
   },
-  handler: function() {
-    console.log('Removing Note');
+  handler: function(argv) {
+    notes.removeNote(argv.title);
   }
 })
 
