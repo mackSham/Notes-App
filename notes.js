@@ -6,6 +6,7 @@ const addNotes = (title,body) => {
     // console.log(notes);
     // let flag = 0;
     const duplicateNote = notes.find(obj => obj.title === title)
+    debugger
     if(!duplicateNote){
         notes.push({
             title:title,
